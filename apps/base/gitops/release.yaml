@@ -1,17 +1,17 @@
 apiVersion: helm.toolkit.fluxcd.io/v2beta2
 kind: HelmRelease
 metadata:
-  name: chart-for-gitops
-  namespace: chart-for-gitops
+  name: gitops
+  namespace: gitops-ns
 spec:
-  releaseName: chart-for-gitops
+  releaseName: gitops
   chart:
     spec:
-      chart: chart-for-gitops
+      chart: charts/gitops
       version: "0.0.1"
       sourceRef:
         kind: GitRepository
-        name: chart-for-gitops
+        name: gitops
   interval: 50m
   values:
     replicaCount: 2
