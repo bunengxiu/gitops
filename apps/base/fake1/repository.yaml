@@ -1,0 +1,10 @@
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: GitRepository
+metadata:
+  name: fake1
+  namespace: fake1
+spec:
+  interval: 3m
+  url: https://github.com/bunengxiu/helm-chart1
+  ref:
+    branch: master
