@@ -7,7 +7,7 @@ spec:
   releaseName: fake
   chart:
     spec:
-      chart: helm-chart
+      chart: ./helm-chart
       sourceRef:
         kind: GitRepository
         name: fake
