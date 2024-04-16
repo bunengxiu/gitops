@@ -1,0 +1,10 @@
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: GitRepository
+metadata:
+  name: chart-for-gitops
+  namespace: chart-for-gitops
+spec:
+  interval: 3m
+  url: https://github.com/bunengxiu/chart-for-gitops
+  ref:
+    branch: master

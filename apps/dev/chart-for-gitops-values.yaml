@@ -1,0 +1,16 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta2
+kind: HelmRelease
+metadata:
+  name: chart-for-gitops
+  namespace: chart-for-gitops
+spec:
+  chart:
+    spec:
+      version: "0.0.1"
+  values:
+    ingress:
+      hosts:
+        - host: chart-for-gitops.dev
+          paths:
+            - path: /
+              pathType: ImplementationSpecific
