@@ -1,16 +1,16 @@
 apiVersion: helm.toolkit.fluxcd.io/v2beta2
 kind: HelmRelease
 metadata:
-  name: gitops
-  namespace: gitops-ns
+  name: fake
+  namespace: fake
 spec:
   chart:
     spec:
-      version: "0.0.1"
+      version: "=0.0.1"
   values:
     ingress:
       hosts:
-        - host: gitops.dev
+        - host: fake.dev
           paths:
             - path: /
               pathType: ImplementationSpecific

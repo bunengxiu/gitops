@@ -1,10 +1,10 @@
 apiVersion: source.toolkit.fluxcd.io/v1
 kind: GitRepository
 metadata:
-  name: gitops
-  namespace: gitops-ns
+  name: fake
+  namespace: fake
 spec:
   interval: 3m
-  url: https://github.com/bunengxiu/chart-for-gitops
+  url: https://github.com/bunengxiu/fake
   ref:
     branch: master
